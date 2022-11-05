@@ -12,7 +12,7 @@
     </head>
     <body>
         
-        <div class="container">
+     <div class="container">
             <div class="row">
                 <div class="col">
                     <h1>User Management System</h1>
@@ -42,6 +42,7 @@
                                             <c:param name="action" value="delete"></c:param>
                                             <c:param name="email" value="${user.email}"></c:param>
                                         </c:url>">Delete</a>
+                                        
                                     </td>
                                 </tr>
                             </c:forEach>
@@ -58,8 +59,8 @@
             <div class="row">
                 <div class="col">
                     <h2>Edit User</h2>
-                    <form action="user?email=${user.email}" method="post">
-                        <p><label for="email" class="form-label">Email:</label><input id="" name="" type="text" value="${user.email}" disabled ></p>
+                    <form action="user" method="post">
+                        <p><label for="email" class="form-label">Email:</label><input id="email" name="email" type="text" value="${user.email}" readonly ></p>
                         <p><label for="firstName" class="form-label">First Name:</label><input id="firstName" name="firstName" type="text" value="${user.firstName}"></p>
                         <p><label for="lastName" class="form-label">Last Name:</label><input id="lastName" name="lastName" type="text" value="${user.lastName}"  ></p>
                         <p><label for="password" class="form-label">Password:</label><input id="password" name="password" type="text" value="${user.password}"  ></p>
@@ -82,3 +83,4 @@
                         
     </body>
 </html>
+
